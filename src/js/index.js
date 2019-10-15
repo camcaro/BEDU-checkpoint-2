@@ -1,5 +1,5 @@
-// IMPORTACIONES
-import Sum from './models/Sum'
+//IMPORTACIONES
+import Sum from './models/Sum.js'
 
 import * as sumView from './views/SumView'
 
