@@ -1,6 +1,6 @@
 // 1. CONSTANTES
 
-const resultArea = document.querySelector("#resultado")
+const resultArea = document.querySelector("#result")
 
 // B. CONSTANTES - EXPORTACIONES
 

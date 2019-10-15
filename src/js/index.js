@@ -3,8 +3,10 @@ import Sum from './models/Sum.js'
 import Sub from './models/Subtract.js'
 import Div from './models/Divide.js'
 import Mul from './models/Multiply.js'
+import Rps from './models/Rps.js'
 
 import * as sumView from './views/SumView'
+import * as RPSView from './views/RPSView'
 
 import styles from '../css/style.css'
 import sassStyles from '../scss/style.scss'
@@ -52,3 +54,24 @@ document.querySelector("#multiply").addEventListener(("click"), () => {
 })
 
 //End calculator
+
+///Rock, Paper, Scissors
+document.querySelector("#rock").addEventListener(("click"), (event) => {
+    console.log(event.target.id)
+    RPSView.clearRPS()
+    return RPSView.renderRPSView(Rps(event.target.id))
+})
+document.querySelector("#paper").addEventListener(("click"), (event) => {
+    console.log(event.target.id)
+    RPSView.clearRPS()
+    return RPSView.renderRPSView(Rps(event.target.id))
+})
+document.querySelector("#scissors").addEventListener(("click"), (event) => {
+    console.log(event.target.id)
+    RPSView.clearRPS()
+    return RPSView.renderRPSView(Rps(event.target.id))
+})
+
+
+// End Rock, Paper, Scissors
+
