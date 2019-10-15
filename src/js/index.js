@@ -4,9 +4,11 @@ import Sub from './models/Subtract.js'
 import Div from './models/Divide.js'
 import Mul from './models/Multiply.js'
 import Rps from './models/Rps.js'
+import FizzBuzz from './models/FizzBuzz.js'
 
 import * as sumView from './views/SumView'
 import * as RPSView from './views/RPSView'
+import * as FizzBuzzView from './views/FizzBuzzView'
 
 import styles from '../css/style.css'
 import sassStyles from '../scss/style.scss'
@@ -57,17 +59,17 @@ document.querySelector("#multiply").addEventListener(("click"), () => {
 
 ///Rock, Paper, Scissors
 document.querySelector("#rock").addEventListener(("click"), (event) => {
-    console.log(event.target.id)
+    // console.log(event.target.id)
     RPSView.clearRPS()
     return RPSView.renderRPSView(Rps(event.target.id))
 })
 document.querySelector("#paper").addEventListener(("click"), (event) => {
-    console.log(event.target.id)
+    // console.log(event.target.id)
     RPSView.clearRPS()
     return RPSView.renderRPSView(Rps(event.target.id))
 })
 document.querySelector("#scissors").addEventListener(("click"), (event) => {
-    console.log(event.target.id)
+    // console.log(event.target.id)
     RPSView.clearRPS()
     return RPSView.renderRPSView(Rps(event.target.id))
 })
@@ -75,3 +77,15 @@ document.querySelector("#scissors").addEventListener(("click"), (event) => {
 
 // End Rock, Paper, Scissors
 
+
+///Fizz Buzz
+document.querySelector("#fizzBuzzButton").addEventListener(("click"), () => {
+        event.preventDefault()
+        // FizzBuzzView.clearFizzBuzz()
+        const numFizzBuzz = FizzBuzzView.parseInputFizzBuzz(FizzBuzzView.getInputFizzBuzz)
+        // console.log(FizzBuzz(numFizzBuzz))
+        return FizzBuzzView.renderFizzBuzzView(FizzBuzz(numFizzBuzz))
+    })
+    
+    //End Fizz Buzz
+    
