@@ -1,6 +1,6 @@
 // 1. CONSTANTES
 
-const resultFBArea = document.querySelector("#fizzBuzzResult")
+const resultFBArea = document.querySelector("#fbResult")
 
 // B. CONSTANTES - EXPORTACIONES
 
@@ -15,11 +15,14 @@ export const parseInputFizzBuzz = (input) => parseInt(input.value)
 export const clearFizzBuzz = (area) => resultFBArea.innerHTML = ""
 
 export const renderFizzBuzzView = (result) => {
-    console.log(document.querySelector("#fizzBuzzResult"))
-    const markup = `
-        <span>
-            ${result}
-        </span>
-    `
+    let markup = ''
+    for(let i=0; i < result.length; i++) {
+        markup += `
+            <span>
+                ${result[i]}
+                <br>
+            </span>
+        `    
+    }
     resultFBArea.insertAdjacentHTML('beforeend', markup)
 }

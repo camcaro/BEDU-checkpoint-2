@@ -5,6 +5,8 @@ import Div from './models/Divide.js'
 import Mul from './models/Multiply.js'
 import Rps from './models/Rps.js'
 import FizzBuzz from './models/FizzBuzz.js'
+import CalculatePayroll from './models/Payroll.js'
+// import AddEmployee from './models/Payroll.js'
 
 import * as sumView from './views/SumView'
 import * as RPSView from './views/RPSView'
@@ -84,8 +86,38 @@ document.querySelector("#fizzBuzzButton").addEventListener(("click"), () => {
         // FizzBuzzView.clearFizzBuzz()
         const numFizzBuzz = FizzBuzzView.parseInputFizzBuzz(FizzBuzzView.getInputFizzBuzz)
         // console.log(FizzBuzz(numFizzBuzz))
+        console.log(document.querySelector("#test"));
+        
         return FizzBuzzView.renderFizzBuzzView(FizzBuzz(numFizzBuzz))
     })
     
-    //End Fizz Buzz
+//End Fizz Buzz
+
+//Payroll Calculator
+
+
+document.querySelector("#addEmployeeButton").addEventListener(("click"), () => {
+    console.log('addEmployeeButton clicked')
+    return "Add employee"
+    // AddEmployee()
+})
+
+document.querySelector("#calculatePayrollButton").addEventListener(("click"), () => {
+    console.log('calculatePayrollButton clicked')
+    return alert(CalculatePayroll())
+})
+
+
+
+// let removeButtonsList = document.querySelectorAll(".removeButton")
+// console.log(removeButtonsList[0])
+//     removeButtonsList.map((element) => {
+//         element.addEventListener(("click"), () => {
+//             console.log(element)
+//             return alert("Aqui va Delete Employee")
+//         })
+//         console.log(element)
+//     })
+
+//End Payroll Calculator
     
